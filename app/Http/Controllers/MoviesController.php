@@ -18,4 +18,10 @@ class MoviesController extends Controller
       $movie = Movie::findOrFail($movieId);
       return view('movies.show', ['movie' => $movie]);
     }
+
+    public function create()
+    {
+      //$movie = Movie::findOrFail($movieId);
+      return view('movies.create');
+    }
 }

@@ -7,7 +7,24 @@
 
   </head>
   <body>
-    @yield('content')
+    <main role="main" class="container">
+      @include('movies.partials.navbar')
 
+          <div class="row">
+            <div class="col-md-8 blog-main">
+
+                 @yield('content')
+
+
+            </div><!-- /.blog-main -->
+               <aside class="col-md-4 blog-sidebar">
+
+
+               </aside><!-- /.blog-sidebar -->
+
+
+          </div><!-- /.row -->
+
+        </main><!-- /.container -->
   </body>
 </html>

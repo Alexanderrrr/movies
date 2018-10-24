@@ -6,6 +6,6 @@
 
 @section('content')
       <ul>
-        <li>{{ $movie->director }}</li>
+        <li>{{ $movie }}</li>
       </ul>
 @endsection
