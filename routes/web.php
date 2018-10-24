@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/movies', 'MoviesController@index');
-Route::get('/movies/show/{movieId}', 'MoviesController@show');
-Route::get('/movies/create', 'MoviesController@create');
+Route::prefix('movies')->group(function () {
+
+    Route::get('/', 'MoviesController@index');
+    Route::get('/show/{movieId}', 'MoviesController@show');
+    Route::get('/create', 'MoviesController@create');
+    Route::post('/', 'MoviesController@store');
+});
+Route::get('/', 'MoviesController@index');
