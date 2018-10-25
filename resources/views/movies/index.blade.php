@@ -19,3 +19,10 @@
   </ul>
 
 @endsection
+@section('sidebar')
+<aside class="col-md-4 blog-sidebar">
+
+     @include('movies.partials.sidebar')
+
+</aside><!-- /.blog-sidebar -->
+@endsection

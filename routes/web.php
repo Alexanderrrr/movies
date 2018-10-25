@@ -17,6 +17,8 @@ Route::prefix('movies')->group(function () {
     Route::get('/', 'MoviesController@index');
     Route::get('/show/{movieId}', 'MoviesController@show');
     Route::get('/create', 'MoviesController@create');
+    Route::get('show/genres/{movieGenres}', 'GenresController@show');
     Route::post('/', 'MoviesController@store');
+    Route::post('/comment/add/{movieId}', 'CommentsController@store');
 });
 Route::get('/', 'MoviesController@index');

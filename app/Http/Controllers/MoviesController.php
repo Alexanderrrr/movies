@@ -9,13 +9,13 @@ class MoviesController extends Controller
 {
     public function index()
     {
-      $movies = Movie::all();
+      $movies = Movie::orderBy('created_at', 'DESC')->get();
       return view('movies.index', ['movies' => $movies]);
     }
 
     public function show($movieId)
     {
-      $movie = Movie::findOrFail($movieId);
+      $movie = Movie::with('comments')->find($movieId); //da ne bude lazy loading
       return view('movies.show', ['movie' => $movie]);
     }
 

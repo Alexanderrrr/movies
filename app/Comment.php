@@ -12,10 +12,9 @@ class Comment extends Model
 
   const VALIDATION_RULES = [
 
-        'body' => 'required | min:25',
+      'body' => 'required | min:25'
 
   ];
-
   public function post()
   {
       return $this->belongsTo(Movie::class);

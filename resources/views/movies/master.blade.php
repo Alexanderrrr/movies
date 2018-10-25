@@ -19,7 +19,7 @@
             </div><!-- /.blog-main -->
                <aside class="col-md-4 blog-sidebar">
 
-
+                    @yield('sidebar')
                </aside><!-- /.blog-sidebar -->
 
 
